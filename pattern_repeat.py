@@ -4,3 +4,7 @@ class Solution:
             if arr[i:i+m] * k == arr[i:i + m * k]:
                 return True
         return False
+
+
+# Time Complexity: O(n):
+# Space Complexity: O(1):
