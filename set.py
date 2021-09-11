@@ -1,4 +1,7 @@
 set_one = set([6, 5])
-set_two = set([5, 6])
+set_two = set([5])
 
-print(set_one == set_two)
+tmp = {3, 4, 5}
+
+print(tmp)
+print(set_one.difference(set_two))
