@@ -3,13 +3,11 @@ class Solution:
         count = 0
         n = len(nums1)
         d1 = defaultdict(int)
-        d2 = defaultdict(int)
         for i in range(n):
             for j in range(n):
                 d1[nums1[i] + nums2[j]] += 1
-                d2[nums3[i] + nums4[j]] += 1
-        for k in d1.keys():
-            remain = 0 - k
-            if remain in d2:
-                count += d1[k] * d2[remain]
-        return count
+        return sum(d1[-c-d] for c in nums3 for d in nums4)
+
+# n = length of array
+# Time Complexity: O(n^2)
+# Space Complexity: O(n^2)
